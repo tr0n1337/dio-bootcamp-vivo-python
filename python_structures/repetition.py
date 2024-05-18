@@ -1,31 +1,31 @@
-# # FOR
-# VOWELS = "AEIOU"
-# try:
-#     TEXT = str(input('Enter a text: '))
-# except ValueError:
-#     print("Invalid input. Please enter a valid string.")
-#     exit()
-# except KeyboardInterrupt:
-#     print("Interrupt!")
-#     exit()
-# except Exception as e:
-#     print(f"Error: {e}")
-#     exit()
+# FOR
+VOWELS = "AEIOU"
+try:
+    TEXT = str(input('Enter a text: '))
+except ValueError:
+    print("Invalid input. Please enter a valid string.")
+    exit()
+except KeyboardInterrupt:
+    print("Interrupt!")
+    exit()
+except Exception as e:
+    print(f"Error: {e}")
+    exit()
 
-# for letter in TEXT:
-#     conditional = "VOWEL" if letter.upper() in VOWELS else "CONSONANT"
-#     print(f"{letter} --- {conditional}")
-# print("\n")
+for letter in TEXT:
+    conditional = "VOWEL" if letter.upper() in VOWELS else "CONSONANT"
+    print(f"{letter} --- {conditional}")
+print("\n")
 
-# # RANGE
-# RANGE_1 = range(10)  # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-# RANGE_2 = range(1, 10)  # 1, 2, 3, 4, 5, 6, 7, 8, 9
-# RANGE_3 = range(0, 51, 5)  # 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
+# RANGE
+RANGE_1 = range(10)  # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+RANGE_2 = range(1, 10)  # 1, 2, 3, 4, 5, 6, 7, 8, 9
+RANGE_3 = range(0, 51, 5)  # 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
 
-# # FOR with RANGE
-# for number in range(10):
-#     print(number, end=" ")
-# print("\n")
+# FOR with RANGE
+for number in range(10):
+    print(number, end=" ")
+print("\n")
 
 # WHILE
 INPUT = "[1] To withdraw \n[2] Extract \n[0] Exit \n:"
