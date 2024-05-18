@@ -5,9 +5,9 @@ WITHDRAWS = [1500, 100]
 # IN operator
 IN_OPERATOR_1 = "Python" in COURSE
 IN_OPERATOR_2 = 200 in WITHDRAWS
-print(IN_OPERATOR_1)
-print(IN_OPERATOR_2)
+print(f"In: {IN_OPERATOR_1}")
+print(f"In: {IN_OPERATOR_2}")
 
 # NOT IN operator
-NOT_IN_OPERATOR = "apple" in FRUITS
-print(NOT_IN_OPERATOR)
+NOT_IN_OPERATOR = "apple" not in FRUITS
+print(f"Not in: {NOT_IN_OPERATOR}")

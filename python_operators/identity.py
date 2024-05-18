@@ -5,9 +5,9 @@ BALANCE, LIMIT = 200, 200
 # IS operator
 IS_OPERATOR_1 = PYTHON_COURSE is COURSE_NAME
 IS_OPERATOR_2 = BALANCE is LIMIT
-print(IS_OPERATOR_1)  # True
-print(IS_OPERATOR_2)  # True
+print(f"Is: {IS_OPERATOR_1}")  # True
+print(f"Is: {IS_OPERATOR_2}")  # True
 
 # IS NOT operator
 IS_NOT_OPERATOR = PYTHON_COURSE is not COURSE_NAME
-print(IS_NOT_OPERATOR)  # False
+print(f"Is not: {IS_NOT_OPERATOR}")  # False
