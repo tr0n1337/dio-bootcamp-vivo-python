@@ -1,0 +1,6 @@
+FIRST_NAME = input("Enter your first name: ")
+LAST_NAME = input("Enter your last name: ")
+print(FIRST_NAME, LAST_NAME)
+print(FIRST_NAME, LAST_NAME, end="...\n")
+print(FIRST_NAME, LAST_NAME, sep="-")
+print(FIRST_NAME, LAST_NAME, sep="-", end="...\n")
