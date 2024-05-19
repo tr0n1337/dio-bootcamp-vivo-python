@@ -64,10 +64,10 @@ def deposit_funds(balance: float, extract: str) -> tuple[float, str]:
                     return deposit_funds(balance, extract)
                 elif NEW_DEPOSIT_INPUT == "b":
                     return balance, extract
-        else:
-            deposit_input_text = "Invalid amount, " + \
-              "please enter with a valid amount => "
-            continue
+                else:
+                    deposit_input_text = "Invalid option, " + \
+                        "please enter with a valid option => "
+                    continue
 
 
 def withdraw_funds(withdrawals: int,
@@ -78,6 +78,12 @@ def withdraw_funds(withdrawals: int,
 
     while True:
         cls()
+
+        if withdrawals > 3:
+            cls()
+            print("Max limit withdrawals per day hit!")
+            input("Please enter for continue...")
+            break
 
         try:
             WITHDRAW_INPUT = float(input(withdraw_text_input))
@@ -94,11 +100,6 @@ def withdraw_funds(withdrawals: int,
             withdraw_text_input = "Max limit for withdraw is R$500.00, " + \
                 "please enter with a new amount => "
             continue
-        elif withdrawals > 3:
-            cls()
-            print("Max limit withdrawals per day hit!")
-            input("Please enter for continue...")
-            break
         elif withdrawals <= 3 and WITHDRAW_INPUT <= LIMIT:
             extract += f"\n[-] => R${WITHDRAW_INPUT:.2f}"
             balance -= WITHDRAW_INPUT
@@ -159,11 +160,14 @@ def main():
               "please enter with a valid option => "
             continue
         elif option == "d":
+            option_input_text = "=> "
             (balance, extract) = deposit_funds(balance, extract)
         elif option == "w":
+            option_input_text = "=> "
             withdrawals += 1
             (balance, extract) = withdraw_funds(withdrawals, balance, extract)
         elif option == "e":
+            option_input_text = "=> "
             view_extract(extract, balance)
         elif option == "q":
             print("Exiting...")
