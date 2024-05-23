@@ -142,7 +142,6 @@ def main():
     withdrawals = 0
     extract = ""
     option_input_text = "=> "
-    menu_options = ["d", "e", "w", "q"]
 
     while True:
         cls()
@@ -155,11 +154,7 @@ def main():
             print("\nKeyboardInterrupt!")
             exit()
 
-        if option not in menu_options:
-            option_input_text = "Invalid option, " + \
-              "please enter with a valid option => "
-            continue
-        elif option == "d":
+        if option == "d":
             option_input_text = "=> "
             (balance, extract) = deposit_funds(balance, extract)
         elif option == "w":
@@ -173,7 +168,9 @@ def main():
             print("Exiting...")
             quit()
         else:
-            break
+            option_input_text = "Invalid option, " + \
+              "please enter with a valid option => "
+            continue
 
 
 if __name__ == "__main__":
