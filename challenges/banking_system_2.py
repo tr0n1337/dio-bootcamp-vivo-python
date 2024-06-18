@@ -1,5 +1,6 @@
 import os
 import getpass
+from typing import Literal
 
 
 class User:
@@ -58,7 +59,7 @@ def back_menu(option: str) -> None:
     print("".center(30, "="))
 
 
-def extract_menu(user: User):
+def extract_menu(user: User) -> None:
     print("\n")
     print(" Extract ".center(30, "="))
     if len(user.extract) > 0:
@@ -74,7 +75,7 @@ def extract_menu(user: User):
 def has_dict_in_list(
     dict_list: list[User],
     target_dict: dict[str, str]
-):
+) -> User | Literal[False]:
     for item in dict_list:
         match = True
         for key, value in target_dict.items():
@@ -256,7 +257,6 @@ def login(users: list[User]) -> User:
                     )
             if user:
                 handle_account_options(user)
-
                 return user
 
         except ValueError:
